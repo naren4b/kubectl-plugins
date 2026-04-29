@@ -1,4 +1,24 @@
 #!/bin/bash
+# kubectl-all-images — List container images running across pods.
+#
+# Usage:
+#   kubectl all-images               List images in the current namespace
+#   kubectl all-images -A            List images across all namespaces
+#   kubectl all-images -n <namespace> List images in a specific namespace
+#
+# Flags:
+#   -A              All namespaces
+#   -n <namespace>  Target a specific namespace
+#
+# Output format:
+#   <namespace>  <image>
+#
+# Requirements:
+#   kubectl must be in PATH and configured with a valid kubeconfig context.
+#
+# Installation:
+#   chmod +x kubectl-all-images.sh
+#   sudo cp kubectl-all-images.sh /usr/local/bin/kubectl-all-images
 
 # Function to display usage information
 usage() {
